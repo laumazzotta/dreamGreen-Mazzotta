@@ -14,8 +14,17 @@ $font-family-sans-serif: 'Poppins', sans-serif;
     box-shadow: none !important;
 }
 
+@media (max-width: 992px) { 
+    
+    .NavCart {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+
 
 
 

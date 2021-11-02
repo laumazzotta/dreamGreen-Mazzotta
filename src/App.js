@@ -1,11 +1,12 @@
 import './App.css';
 import NavBar from './Components/NavBar.js';
+import Carousel from './Components/Carousel.js';
 
 const App = () => {
   return (
     <>
-      <NavBar />
-      <hr className="m-0" />
+      <NavBar titulo="Tienda online de productos sustentables y reciclados" />
+      <Carousel />
     </>
   );
 }
