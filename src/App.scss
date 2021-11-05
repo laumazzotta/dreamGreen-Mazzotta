@@ -28,22 +28,15 @@ $font-family-sans-serif: 'Poppins', sans-serif;
     max-height: 50vh;
 }
 
-:root{
-    --toastify-color-progress-light: linear-gradient(
-      to right,
-      #CBD5CB,
-      rgb(63, 201, 118),
-      #006B2B,
-      rgb(0, 52, 21)
+// :root{
+//     --toastify-color-progress-light: linear-gradient(
+//       to right,
+//       #CBD5CB,
+//       rgb(63, 201, 118),
+//       #006B2B,
+//       rgb(0, 52, 21)
       
-    );
-  }
+//     );
+//   }
 
-  @import "../node_modules/react-toastify/dist/ReactToastify.css";
-
-
-
-
-
-
-
+// @import "../node_modules/react-toastify/dist/ReactToastify";

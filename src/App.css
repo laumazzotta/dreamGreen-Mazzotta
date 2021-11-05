@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url(/Users/laurina/Documents/Curso_REACT/dreamGreen-Mazzotta/node_modules/react-toastify/dist/ReactToastify.css);
 .navbar-toggler:focus {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
@@ -11975,16 +11974,5 @@ fieldset:disabled .btn {
 
 .card-img-top {
   max-height: 50vh;
-}
-
-:root {
-  --toastify-color-progress-light: linear-gradient(
-      to right,
-      #CBD5CB,
-      rgb(63, 201, 118),
-      #006B2B,
-      rgb(0, 52, 21)
-      
-    );
 }
 /*# sourceMappingURL=App.css.map */
