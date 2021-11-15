@@ -25,18 +25,13 @@ $font-family-sans-serif: 'Poppins', sans-serif;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .card-img-top {
-    max-height: 50vh;
+    height: 40vh;
 }
 
-// :root{
-//     --toastify-color-progress-light: linear-gradient(
-//       to right,
-//       #CBD5CB,
-//       rgb(63, 201, 118),
-//       #006B2B,
-//       rgb(0, 52, 21)
-      
-//     );
-//   }
+.card:hover {
+    box-shadow: -6px -7px 7px rgba(0, 0, 0, 0.2);
+}
 
-// @import "../node_modules/react-toastify/dist/ReactToastify";
+.offcanvas {
+    z-index: 10000;
+}

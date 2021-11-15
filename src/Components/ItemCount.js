@@ -1,31 +1,29 @@
-import {useState} from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import {useState, useEffect} from "react";
 
-const ItemCount = (props) => {
+const ItemCount = ({ stock = 0, initial = 1,  onAdd }) => {
 
     const [cantidad, setCantidad] = useState(1);
+
+    useEffect(() => {
+        setCantidad(initial);
+    },[initial]);
+
     const increment = () => {
-        if(cantidad < props.stock) setCantidad(cantidad+1);
+        if(cantidad < stock) setCantidad(cantidad+1);
     }
     const decrement = () => {
-        if(cantidad > props.inicial) setCantidad(cantidad-1);
-    }
-
-    const agregarAlCarrito = () => {
-        toast("Producto agregado al carrito!");        
+        if(cantidad > initial) setCantidad(cantidad-1);
     }
     
     return (
-        <div className="container w-50">
+        <div className="container">
             <div className="d-flex flex-row justify-content-between">
                 <button onClick={decrement} className="btn btn-secondary">-</button>
                 {cantidad}
                 <button onClick={increment} className="btn btn-secondary">+</button>
             </div>
             <div>
-                <button onClick={agregarAlCarrito} id="botonAgregar" className="btn btn-primary w-100 my-3">Agregar al carrito</button>
-                <ToastContainer />
+                <button onClick={() => onAdd(cantidad)} id="botonAgregar" className="btn btn-primary w-100 my-3">Agregar al carrito</button>
             </div>
         </div>
         

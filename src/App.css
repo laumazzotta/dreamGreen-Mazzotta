@@ -11973,6 +11973,15 @@ fieldset:disabled .btn {
 }
 
 .card-img-top {
-  max-height: 50vh;
+  height: 40vh;
+}
+
+.card:hover {
+  -webkit-box-shadow: -6px -7px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: -6px -7px 7px rgba(0, 0, 0, 0.2);
+}
+
+.offcanvas {
+  z-index: 10000;
 }
 /*# sourceMappingURL=App.css.map */
