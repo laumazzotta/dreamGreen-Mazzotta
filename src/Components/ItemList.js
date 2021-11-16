@@ -10,11 +10,11 @@ const override = css`
 
 const ItemList = ({items}) => {
 
-    let color = ("#ffffff");
+    let color = ("#006B2B");
 
     return (
         items.length > 0
-        ? items.map(item => <Item key={item.id} title={item.name} price={item.price} image={item.image} description={item.description} />)
+        ? items.map(item => <Item key={item.id} name={item.name} price={item.price} image={item.image} description={item.description} category={item.category} />)
         : <ClipLoader color={color} css={override} size={150} />
     );
 }

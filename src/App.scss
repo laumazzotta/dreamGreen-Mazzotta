@@ -26,10 +26,18 @@ $font-family-sans-serif: 'Poppins', sans-serif;
 
 .card-img-top {
     height: 40vh;
+    border-radius: 0 !important; 
+}
+
+.card {
+    transition: all .3s;
+    border-radius: 0 !important; 
 }
 
 .card:hover {
     box-shadow: -6px -7px 7px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+    transition: all .3s;
 }
 
 .offcanvas {
