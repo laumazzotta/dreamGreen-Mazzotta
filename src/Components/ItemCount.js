@@ -16,7 +16,7 @@ const ItemCount = ({ stock = 0, initial = 1,  onAdd }) => {
     }
     
     return (
-        <div className="container">
+        <div>
             <div className="d-flex flex-row justify-content-between">
                 <button onClick={decrement} className="btn btn-secondary">-</button>
                 {cantidad}

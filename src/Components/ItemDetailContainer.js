@@ -1,17 +1,17 @@
 import ItemDetail from './ItemDetail';
 import customFetch from './customFetch';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 const { products } = require('./ProductsDetail');
 
 const ItemDetailContainer = () => {
     
-    const [datos, setDatos] = useState([]);
+    const [datos, setDatos] = useState({});
+    const { idItem } = useParams();
 
     useEffect(() => {
-            customFetch(2000, products)
-                .then(result => {
-                    setDatos(result)
-                })
+            customFetch(2000, products.find(item => item.id === parseInt(idItem)))
+                .then(result => setDatos(result))
                 .catch(err => console.log(err))
     }, []);
 
@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
         <>
 
         <div className="row row-cols-1 row-cols-lg-4">
-            <ItemDetail items={datos} />
+            <ItemDetail item={datos} />
         </div>
 
         </>
