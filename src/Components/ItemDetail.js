@@ -3,6 +3,8 @@ import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import ItemCount from "./ItemCount";
 import { css } from "@emotion/react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const override = css`
   display: block;
@@ -12,8 +14,13 @@ const override = css`
 
 
 const ItemDetail = ({item}) => {
+
+    const [itemCount, setItemCount] = useState(0);
+
     const onAdd = (cantAgregada) => {
         toast("Agregaste " + cantAgregada + " unidades al carrito!"); 
+        setItemCount(cantAgregada);
+        
     }
     let color = ("#006B2B");
 
@@ -31,7 +38,15 @@ const ItemDetail = ({item}) => {
                     <p>{item.description} </p>
                     <p className="fst-italic">{item.category}</p>
                     <div className="w-50">
-                        <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                        {
+                            itemCount === 0
+                            ? <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                            : <Link to='/cart'><button className="btn btn-primary mb-3">CHECKOUT</button></Link>
+                        }
+                        
+                    </div>
+                    <div>
+                        <Link to='/'> <button className="btn btn-secondary">VOLVER</button></Link>
                     </div>
                     <ToastContainer />
                 </div>

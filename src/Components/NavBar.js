@@ -8,8 +8,8 @@ const NavBar = ({titulo}) => {
 
     return (
         <>
-        <nav className="navbar navbar-light bg-light">
-            <div className="w-100 d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between flex-wrap">
+        <nav className="navbar navbar-light bg-light ">
+            <div className="w-100 d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between flex-wrap ">
                 <Link to='/' className="navbar-brand m-0 m-lg-3 order-1 order-lg-0"><img src={logo} width="150" alt="logo" /></Link>
                 
                 <h4 className="text-primary text-center order-2 order-lg-0">{titulo}</h4>

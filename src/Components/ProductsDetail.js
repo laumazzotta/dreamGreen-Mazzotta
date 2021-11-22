@@ -16,7 +16,7 @@ const products = [
       stock: 5,
       price: 1500,
       image: "/Images/backpack.jpg",
-      category: "Aire libre"
+      category: "AireLibre"
     },
     {
       id: 3,
@@ -52,7 +52,7 @@ const products = [
       stock: 10,
       price: 600,
       image: "/Images/botella.jpeg",
-      category: "Aire libre"
+      category: "AireLibre"
     },
     {
       id: 7,
@@ -70,7 +70,7 @@ const products = [
       stock: 100,
       price: 400,
       image: "/Images/cepillo de dientes.jpeg",
-      category: "Cuidado personal"
+      category: "CuidadoPersonal"
     },
     {
       id: 9,
@@ -88,7 +88,7 @@ const products = [
       stock: 5,
       price: 1400,
       image: "/Images/skate.jpeg",
-      category: "Aire libre"
+      category: "AireLibre"
     },
     {
       id: 11,
@@ -106,7 +106,7 @@ const products = [
       stock: 500,
       price: 1200,
       image: "/Images/copa.jpeg",
-      category: "Cuidado personal"
+      category: "CuidadoPersonal"
     },
     {
       id: 13,
@@ -115,7 +115,7 @@ const products = [
       stock: 200,
       price: 1800,
       image: "/Images/yoga mat.jpeg",
-      category: "Aire libre"
+      category: "AireLibre"
     },
     {
       id: 14,
@@ -124,7 +124,7 @@ const products = [
       stock: 50,
       price: 5600,
       image: "/Images/shorts.jpeg",
-      category: "Aire libre"
+      category: "AireLibre"
     },
     {
       id: 15,
@@ -133,7 +133,7 @@ const products = [
       stock: 50,
       price: 2300,
       image: "/Images/t-shirt.jpeg",
-      category: "Aire libre"
+      category: "AireLibre"
     },
     {
       id: 16,

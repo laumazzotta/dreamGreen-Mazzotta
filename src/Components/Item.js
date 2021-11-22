@@ -1,8 +1,9 @@
 import ItemCount from './ItemCount.js';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 
-const Item = ({name, image, description, price, category}) => {
+const Item = ({id, name, image, description, price, category}) => {
 
     const onAdd = (cantAgregada) => {
         toast("Agregaste " + cantAgregada + " unidades al carrito!"); 
@@ -11,7 +12,7 @@ const Item = ({name, image, description, price, category}) => {
     return (
         
             <div className="card p-0">
-                    <img src={image} className="card-img-top" alt="img" />
+                    <Link to={`/item/${id}`}><img src={image} className="card-img-top" alt="img" /></Link>
                     <div className="card-body">
                         <h5 className="card-title">{name}</h5>
                         <p className="card-text fw-light">{category}</p>
