@@ -40,8 +40,8 @@ const ItemDetail = ({item}) => {
                     <div className="w-50">
                         {
                             itemCount === 0
-                            ? <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
-                            : <Link to='/cart'><button className="btn btn-primary mb-3">CHECKOUT</button></Link>
+                            ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                            : <Link to='/cart'><button className="btn btn-success mb-3">CHECKOUT</button></Link>
                         }
                         
                     </div>

@@ -22,7 +22,7 @@ const ItemListContainer = () => {
     return (
         <>
         <div className="fs-3 bg-secondary text-primary text-center py-3">Productos destacados</div>
-        <div className="row row-cols-1 row-cols-lg-4">
+        <div className="row row-cols-1 row-cols-lg-4 mw-100 m-0">
             <ItemList items={datos} />
         </div>
 
