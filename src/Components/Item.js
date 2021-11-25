@@ -4,10 +4,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
 
 const Item = ({id, name, image, description, price, category}) => {
-
-    // const onAdd = (cantAgregada) => {
-    //     toast("Agregaste " + cantAgregada + " unidades al carrito!"); 
-    // }
     
     return (
         
@@ -22,10 +18,6 @@ const Item = ({id, name, image, description, price, category}) => {
                         <p className="card-text fw-light">{category}</p>
                         <p className="card-text">{description}</p>
                         <p className="card-text">${price}</p>
-                        {/* <div className="w-75 mx-auto">
-                            <ItemCount stock={10} initial={1} onAdd={onAdd} />
-                        </div>
-                        <ToastContainer /> */}
                     </div>
             </div>
     );

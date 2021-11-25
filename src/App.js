@@ -5,10 +5,12 @@ import ItemDetailContainer from './Components/ItemDetailContainer.js';
 import { Route, Routes } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import Cart from './Components/Cart';
+import CartContextProvider from './Components/CartContext';
 
 const App = () => {
   return (
     <>
+    <CartContextProvider>
       <BrowserRouter>
         <NavBar titulo="Tienda online de productos sustentables y reciclados" />
           <Routes>
@@ -18,6 +20,7 @@ const App = () => {
             <Route path='/cart' element={<Cart />} />
           </Routes>
       </BrowserRouter>  
+    </CartContextProvider>
       
     </>
   );

@@ -4,12 +4,19 @@
           box-shadow: none !important;
 }
 
+.logo-img {
+  width: 150px;
+}
+
 @media (max-width: 992px) {
   .NavCart {
     width: 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .logo-img {
+    width: 60px;
   }
 }
 
@@ -12021,5 +12028,64 @@ fieldset:disabled .btn {
 
 .offcanvas {
   z-index: 10000;
+}
+
+.btn {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.boton-delete, .cart-widget {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.boton-delete:hover, .cart-widget:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.vh-50 {
+  height: 50vh;
+}
+
+.items-carrito:nth-child(odd) {
+  background-color: rgba(192, 192, 192, 0.454);
+}
+
+.items-carrito:nth-child(even) {
+  background-color: rgba(211, 211, 211, 0.475);
+}
+
+.btn {
+  border-radius: 50rem;
+}
+
+.btn-success:hover {
+  color: #2B006B;
+  background-color: white;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.btn-success, .btn.primary {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.btn.primary:hover {
+  color: #006B2B !important;
+  background-color: white !important;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 /*# sourceMappingURL=App.css.map */

@@ -7,7 +7,7 @@ const Cart = () => {
     return (
         <>
             <Link to='/Cart'>
-                <div className="fs-1 text-primary px-3">
+                <div className="fs-1 text-primary px-3 cart-widget">
                     <BsFillCartFill />
                 </div>
             </Link>

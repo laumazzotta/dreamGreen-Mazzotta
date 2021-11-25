@@ -4,7 +4,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import ItemCount from "./ItemCount";
 import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "./CartContext";
 
 const override = css`
   display: block;
@@ -16,10 +17,12 @@ const override = css`
 const ItemDetail = ({item}) => {
 
     const [itemCount, setItemCount] = useState(0);
+    const context = useContext(CartContext);
 
     const onAdd = (cantAgregada) => {
         toast("Agregaste " + cantAgregada + " unidades al carrito!"); 
         setItemCount(cantAgregada);
+        context.addToCart(item, cantAgregada);
         
     }
     let color = ("#006B2B");
