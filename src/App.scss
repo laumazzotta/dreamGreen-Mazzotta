@@ -75,16 +75,12 @@ $font-family-sans-serif: 'Poppins', sans-serif;
     z-index: 10000;
 }
 
-.btn {
-    transition: all .3s;   
-}
-
 .btn:hover {
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
     transition: all .3s;   
 }
 
-.boton-delete, .cart-widget {
+.boton-delete, .cart-widget, .btn, .btn-success, .btn.primary, .btn-light {
     transition: all .3s;
 }
 .boton-delete:hover, .cart-widget:hover {
@@ -97,11 +93,11 @@ $font-family-sans-serif: 'Poppins', sans-serif;
 }
 
 .items-carrito:nth-child(odd) {
-    background-color: rgba(192, 192, 192, 0.454);
+    background-color: white;
 }
 
 .items-carrito:nth-child(even) {
-    background-color: rgba(211, 211, 211, 0.475);
+    background-color: #EAEAEA;
 }
 
 .btn {
@@ -113,12 +109,27 @@ $font-family-sans-serif: 'Poppins', sans-serif;
     background-color: white;
     transition: all .3s;
 }
-.btn-success, .btn.primary {
-    transition: all .3s;
-}
 
 .btn.primary:hover {
     color: $primary !important;
     background-color: white !important;
     transition: all .3s;
+}
+
+.boton-light:hover {
+    color: white !important;
+    background-color: $primary !important;
+    transition: all .3s;
+}
+
+.btn-secondary {
+    color: $primary;
+    background-color: white;
+    border-color: $primary;
+}
+
+.bagde-carrito {
+    top: 0;
+    right: 0;
+    padding: .4rem;
 }

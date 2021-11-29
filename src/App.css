@@ -12030,11 +12030,6 @@ fieldset:disabled .btn {
   z-index: 10000;
 }
 
-.btn {
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
 .btn:hover {
   -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
@@ -12042,7 +12037,7 @@ fieldset:disabled .btn {
   transition: all .3s;
 }
 
-.boton-delete, .cart-widget {
+.boton-delete, .cart-widget, .btn, .btn-success, .btn.primary, .btn-light {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -12059,11 +12054,11 @@ fieldset:disabled .btn {
 }
 
 .items-carrito:nth-child(odd) {
-  background-color: rgba(192, 192, 192, 0.454);
+  background-color: white;
 }
 
 .items-carrito:nth-child(even) {
-  background-color: rgba(211, 211, 211, 0.475);
+  background-color: #EAEAEA;
 }
 
 .btn {
@@ -12077,15 +12072,29 @@ fieldset:disabled .btn {
   transition: all .3s;
 }
 
-.btn-success, .btn.primary {
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
 .btn.primary:hover {
   color: #006B2B !important;
   background-color: white !important;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+.boton-light:hover {
+  color: white !important;
+  background-color: #006B2B !important;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.btn-secondary {
+  color: #006B2B;
+  background-color: white;
+  border-color: #006B2B;
+}
+
+.bagde-carrito {
+  top: 0;
+  right: 0;
+  padding: .4rem;
 }
 /*# sourceMappingURL=App.css.map */
