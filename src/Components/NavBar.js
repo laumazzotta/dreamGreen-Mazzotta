@@ -11,16 +11,7 @@ const NavBar = ({titulo}) => {
         <nav className="navbar navbar-light bg-light ">
             <div className="w-100 d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between flex-wrap ">
                 <Link to='/' className="navbar-brand m-3 order-1 order-lg-0"><img src={logo} className="logo-img" alt="logo" /></Link>
-                
                 <h4 className="text-primary text-center order-2 order-lg-0">{titulo}</h4>
-                
-                {/* <form className="d-none d-lg-flex">
-                    <input className="form-control me-2" type="search" placeholder="Buscar producto" aria-label="Search" />
-                    <button className="btn btn-outline-primary" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
-                    </button>
-                </form> */}
-
                 <div className="NavCart d-flex flex-row">
                     <Cart />
                     <button className="navbar-toggler border-0 align-self-end align-self-lg-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">

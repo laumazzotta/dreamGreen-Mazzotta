@@ -17,14 +17,30 @@ const Cart = () => {
                 {context.cartList.map(item =>
                     <div key={item.idItem} className="mx-auto row row-cols-1 row-cols-lg-4 w-75 p-0 align-items-center w-100 items-carrito">
                         <div className="col p-0">
-                            <img src={item.imgItem} alt='productos' height="150" width="150" />
+                            <Link to={`/item/${item.idItem}`}>
+                                <img src={item.imgItem} alt='productos' height="150" width="150" />
+                            </Link>
                         </div>
                         <div className="col">
                             <h4>{item.nameItem}</h4>
+                            <p>Precio unitario: ${item.priceItem}</p>
                         </div>
                         <div className="col">
-                            <p>Cantidad: {item.cantItem}</p>
-                            <p>Precio unitario: ${item.priceItem}</p>
+                            <div className="row align-items-center mx-auto w-50">
+                            
+                            {
+                                (item.stockItem > 0) 
+                                ? <button className="btn btn-primary col p-0 btn-carrito" onClick={() => context.aumentarCantidad(item.idItem, 1)}>+</button>
+                                : <button disabled className="btn btn-primary col p-0 btn-carrito" >+</button>
+                            }
+                            <p className="text-center col mb-0">{item.cantItem}</p>
+                            {
+                                (item.cantItem > 1)
+                                ? <button className="btn btn-secondary col p-0 btn-carrito" onClick={() => context.restarCantidad(item.idItem, 1)}>-</button>
+                                : <button disabled className="btn btn-secondary col p-0 btn-carrito" >-</button>
+                            }
+                            </div>
+                            
                         </div>
                         <div className="col text-center">
                             <BsTrashFill onClick={() => context.deleteItem(item.idItem)} role="button" className="text-primary text-center fs-3 boton-delete"/>

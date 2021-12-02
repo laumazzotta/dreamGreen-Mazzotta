@@ -23,7 +23,6 @@ const ItemDetail = ({item}) => {
         toast("Agregaste " + cantAgregada + " unidades al carrito!"); 
         setItemCount(cantAgregada);
         context.addToCart(item, cantAgregada);
-        
     }
     let color = ("#006B2B");
 
@@ -39,6 +38,7 @@ const ItemDetail = ({item}) => {
                     <h2>{item.name}</h2>
                     <p>$ {item.price}</p> 
                     <p>{item.description} </p>
+                    <p>Stock: {item.stock}</p>
                     <p className="fst-italic">{item.category}</p>
                     <div className="w-50">
                         {

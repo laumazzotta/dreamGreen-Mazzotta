@@ -9,9 +9,9 @@ const Products = () => {
                     Productos
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <Link to={'/category/CuidadoPersonal'} className="dropdown-item">Cuidado personal</Link>
-                    <Link to={'/category/Hogar'} className="dropdown-item">Hogar</Link>
-                    <Link to={'/category/AireLibre'} className="dropdown-item">Aire libre</Link>
+                    <Link to={'/category/EYCl5yuuUB7Y2Jgu66rS'} className="dropdown-item">Cuidado personal</Link>
+                    <Link to={'/category/f4CcHKoFPPZ7BfU05Tgs'} className="dropdown-item">Hogar</Link>
+                    <Link to={'/category/VyenJUlaapdUyNilvilW'} className="dropdown-item">Aire libre</Link>
                 </ul>
             </li>
         </>

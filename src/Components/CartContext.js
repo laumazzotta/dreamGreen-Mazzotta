@@ -16,11 +16,13 @@ const CartContextProvider = ({children}) => {
                 imgItem: item.image,
                 nameItem: item.name,
                 priceItem: item.price,
+                stockItem: item.stock,
                 cantItem: cantAgregada
             }
         ]);
         } else {
             found.cantItem += cantAgregada;
+            setCartList([...cartList]);
         }
     }
 
@@ -56,6 +58,24 @@ const CartContextProvider = ({children}) => {
         return totalItems.reduce(((previousValue, currentValue) => previousValue + currentValue), 0)
     }
 
+    const aumentarCantidad = (id, cantidad) => {
+        setCartList(cartList.map((item) => {
+            if (item.idItem === id && (cantidad > 0) && (item.cantItem < item.stockItem)) {
+                item.cantItem += 1;
+            }
+            return item;
+        }));
+    }
+    
+    const restarCantidad = (id, cantidad) => {
+        setCartList(cartList.map((item) => {
+            if (item.idItem === id && cantidad && item.cantItem > 1) {
+                item.cantItem -= 1;
+            }
+            return item;
+        }));
+    }
+
     return (
         <CartContext.Provider value={{
             cartList,
@@ -66,7 +86,9 @@ const CartContextProvider = ({children}) => {
             subtotal,
             taxes,
             total,
-            calcularTotalItems
+            calcularTotalItems,
+            aumentarCantidad,
+            restarCantidad
         }}>
             {children}
         </CartContext.Provider>
