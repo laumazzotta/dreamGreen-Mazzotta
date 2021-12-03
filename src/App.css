@@ -8,18 +8,6 @@
   width: 150px;
 }
 
-@media (max-width: 992px) {
-  .NavCart {
-    width: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .logo-img {
-    width: 60px;
-  }
-}
-
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -12100,5 +12088,28 @@ fieldset:disabled .btn {
 
 .btn-carrito {
   max-width: 30px;
+}
+
+.w-75-xl {
+  width: 75%;
+}
+
+.w-50-xl {
+  width: 50%;
+}
+
+@media (max-width: 992px) {
+  .NavCart {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .logo-img {
+    width: 60px;
+  }
+  .w-90-mob {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=App.css.map */

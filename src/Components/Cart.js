@@ -3,10 +3,54 @@ import { CartContext } from "./CartContext";
 import { BsTrashFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
+import { serverTimestamp, doc, collection, setDoc, updateDoc, increment } from "firebase/firestore";
+import db from '../utils/firebaseConfig';
+
+
 
 const Cart = () => {
 
     const context = useContext(CartContext);
+
+    const createOrder = () => {
+        const orderItems = context.cartList.map(item => ({
+            id: item.idItem,
+            title: item.nameItem,
+            price: item.priceItem
+        }));
+
+        context.cartList.forEach(async (item) => {
+            const itemRef = doc(db, "products", item.idItem);
+            await updateDoc(itemRef, {
+                stock: increment(-item.cantItem)
+            });
+        });
+
+        const order = {
+            buyer: {
+                name: "Juan Cieri",
+                email: "juan@gmail.com",
+                phone: "123456789"
+            },
+            total: context.total(),
+            items: orderItems,
+            date: serverTimestamp()
+        };
+
+        console.log(order.buyer);
+
+        const createOrderInFirestore = async () => {
+            const newOrderRef = doc(collection(db, "orders"));
+            await setDoc(newOrderRef, order);
+            return newOrderRef;
+        }
+
+        createOrderInFirestore()
+            .then(result => alert('Muchas gracias por tu compra! Tu número de orden es:' + result.id))
+            .catch(err => console.log(err))
+
+        context.removeList();
+    }
 
     if (context.cartList.length > 0) {
         return (
@@ -29,15 +73,15 @@ const Cart = () => {
                             <div className="row align-items-center mx-auto w-50">
                             
                             {
-                                (item.stockItem > 0) 
-                                ? <button className="btn btn-primary col p-0 btn-carrito" onClick={() => context.aumentarCantidad(item.idItem, 1)}>+</button>
-                                : <button disabled className="btn btn-primary col p-0 btn-carrito" >+</button>
-                            }
-                            <p className="text-center col mb-0">{item.cantItem}</p>
-                            {
                                 (item.cantItem > 1)
                                 ? <button className="btn btn-secondary col p-0 btn-carrito" onClick={() => context.restarCantidad(item.idItem, 1)}>-</button>
                                 : <button disabled className="btn btn-secondary col p-0 btn-carrito" >-</button>
+                            }
+                            <p className="text-center col mb-0">{item.cantItem}</p>
+                            {
+                                (item.stockItem > 0) 
+                                ? <button className="btn btn-primary col p-0 btn-carrito" onClick={() => context.aumentarCantidad(item.idItem, 1)}>+</button>
+                                : <button disabled className="btn btn-primary col p-0 btn-carrito" >+</button>
                             }
                             </div>
                             
@@ -55,7 +99,7 @@ const Cart = () => {
                     <p className="fw-light">Impuestos (IVA 21%): <span className="float-end">$ {context.taxes()}</span></p>
                     <hr/>
                     <p className="fw-bold fs-4">TOTAL: <span className="float-end">${context.total()}</span></p>
-                    <button className="btn btn-light mt-2 boton-light w-100">FINALIZAR COMPRA</button>
+                    <button onClick={createOrder} className="btn btn-light mt-2 boton-light w-100">FINALIZAR COMPRA</button>
                 </div>
             </section>
             <Link to='/'><button className="btn btn-primary m-3 float-start">Volver al catálogo</button></Link>

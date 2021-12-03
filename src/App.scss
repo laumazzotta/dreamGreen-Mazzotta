@@ -19,18 +19,6 @@ $font-family-sans-serif: 'Poppins', sans-serif;
     width: 150px;
 }
 
-@media (max-width: 992px) { 
-    
-    .NavCart {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .logo-img {
-        width: 60px;
-    }
-}
-
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .card-img-top {
@@ -136,4 +124,28 @@ $font-family-sans-serif: 'Poppins', sans-serif;
 
 .btn-carrito {
     max-width: 30px;
+}
+
+.w-75-xl {
+    width: 75%;
+}
+
+.w-50-xl {
+    width: 50%;
+}
+
+@media (max-width: 992px) { 
+    
+    .NavCart {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .logo-img {
+        width: 60px;
+    }
+
+    .w-90-mob {
+        width: 90%;
+    }
 }

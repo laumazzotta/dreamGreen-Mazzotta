@@ -30,9 +30,9 @@ const ItemDetail = ({item}) => {
         <> {
             item.image
             ? 
-            <div className="mx-auto row w-75 mt-5">
+            <div className="mx-auto row w-75-xl w-90-mob my-5">
                 <div className="col-lg">
-                    <img src={item.image} alt='productos' width="400" />                    
+                    <img src={item.image} alt='productos' width="400" className="mw-100 mb-5 mb-lg-0" />                    
                 </div>
                 <div className="col-lg">
                     <h2>{item.name}</h2>
@@ -40,7 +40,7 @@ const ItemDetail = ({item}) => {
                     <p>{item.description} </p>
                     <p>Stock: {item.stock}</p>
                     <p className="fst-italic">{item.category}</p>
-                    <div className="w-50">
+                    <div className="w-90-mob w-50-xl mx-auto mx-lg-0">
                         {
                             itemCount === 0
                             ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
@@ -48,7 +48,7 @@ const ItemDetail = ({item}) => {
                         }
                         
                     </div>
-                    <div>
+                    <div className="text-end">
                         <Link to='/'> <button className="btn btn-secondary">VOLVER</button></Link>
                     </div>
                     <ToastContainer />
