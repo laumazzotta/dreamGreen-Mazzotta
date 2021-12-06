@@ -1,9 +1,19 @@
-
 // COLORS
 
 $primary: #006B2B;
 $secondary: #CBD5CB;
 $success: #2B006B;
+
+.text-primary {
+    color: $primary !important;
+}
+.bg-primary {
+    background-color: $primary !important;
+}
+
+.bg-secondary {
+    background-color: $secondary !important;
+}
 
 // FONTS
 
@@ -18,8 +28,6 @@ $font-family-sans-serif: 'Poppins', sans-serif;
 .logo-img {
     width: 150px;
 }
-
-@import "../node_modules/bootstrap/scss/bootstrap";
 
 .card-img-top {
     height: 40vh;
@@ -108,6 +116,11 @@ $font-family-sans-serif: 'Poppins', sans-serif;
     color: white !important;
     background-color: $primary !important;
     transition: all .3s;
+}
+
+.btn-primary {
+    background-color: $primary !important;
+    border-color: $primary !important;
 }
 
 .btn-secondary {
