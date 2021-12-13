@@ -20,7 +20,7 @@ const ItemDetail = ({item}) => {
     const context = useContext(CartContext);
 
     const onAdd = (cantAgregada) => {
-        toast("Agregaste " + cantAgregada + " unidades al carrito!"); 
+        toast("Agregaste " + item.name + " al carrito!"); 
         setItemCount(cantAgregada);
         context.addToCart(item, cantAgregada);
     }

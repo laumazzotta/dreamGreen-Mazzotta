@@ -6,6 +6,8 @@ import { Route, Routes } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import Cart from './Components/Cart';
 import CartContextProvider from './Components/CartContext';
+import QuienesSomos from './Components/QuienesSomos';
+import Footer from './Components/Footer';
 
 const App = () => {
   return (
@@ -18,7 +20,10 @@ const App = () => {
             <Route path="/category/:idCategory" element={<ItemListContainer />} />
             <Route path='/item/:idItem' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/QuienesSomos' element={<QuienesSomos />} />
           </Routes>
+        <Footer />
+        <p className="bg-primary text-center mb-0 p-3 fw-light">&copy; Laura Mazzotta 2021</p>
       </BrowserRouter>  
     </CartContextProvider>
       
