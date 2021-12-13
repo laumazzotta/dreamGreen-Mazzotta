@@ -45,7 +45,7 @@ const Checkout = () => {
 
         console.log(order.buyer);
 
-        if (orderData.email === orderData.emailConf) {
+        if (orderData.email === orderData.emailConf && orderData.name.length > 1) {
             const createOrderInFirestore = async () => {
                 const newOrderRef = doc(collection(db, "orders"));
                 await setDoc(newOrderRef, order);
@@ -67,7 +67,7 @@ const Checkout = () => {
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: 'Los mails ingresados deben coincidir',
+                    text: 'Los mails ingresados deben coincidir. Debés completar el formulario para procesar tu compra.',
                 })
             }
     }
